@@ -1,0 +1,122 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #37B7C3; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff; /* White container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #100f0f; /* Dark gray heading text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+input[type="file"] {
+    margin: 10px 0 20px 0;
+}
+
+.btn {
+    background-color: #088395; /* Pastel blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #071952; /* Darker blue on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #ff0000; /* Red error message text */
+}
+
+ul li {
+    background-color: #ffe6e6; /* Light red background for error messages */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray table header background */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray alternating row background */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Lighter gray on hover */
+}
+
+.upload-box {
+    background-color: #EBF4F6; /* Pastel yellow upload box */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.upload-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.red{
+    color:red;
+}

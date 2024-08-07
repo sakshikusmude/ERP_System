@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student and Fees Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student and Fees Details</h1>
+        
+        
+        
+        <form action="{{ url_for('send_reminders') }}" method="post">
+            <input class="btn" type="submit" value="Send Reminders">
+        </form>
+        
+        <br>
+
+        
+        <div class="table-container">
+            {{ tables|safe }}
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-success">
+                <p class = "red">{{ messages[0] }}</p>
+                <a class="btn" href="{{ url_for('index') }}">Go to Homepage</a> <!-- Button to go back to homepage -->
+            </div>
+          {% endif %}
+        {% endwith %}
+
+    </div>
+</body>
+</html>
+

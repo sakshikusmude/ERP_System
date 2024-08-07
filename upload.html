@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Student and Fees Files</h1>
+        <div class="upload-box">
+            <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+                <label for="student_file">Upload Student File:</label>
+                <input type="file" name="student_file" id="student_file" required><br><br>
+                <label for="fees_file">Upload Fees File:</label>
+                <input type="file" name="fees_file" id="fees_file" required><br><br>
+                <input class="btn" type="submit" value="Upload">
+            </form>
+        </div>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>
+
